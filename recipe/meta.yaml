@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_qdrant-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_qdrant-{{ version }}.tar.gz
   sha256: 41b8573cbb1b4706f76dc769251d8e6b3e4107ecd5fa97c58141977ec19fba75
 
 build:
@@ -20,9 +20,9 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - pydantic >=2.7.4,<3.0.0
     - python >=3.8.1,<4.0
-    - langchain-core >=0.1.52,<0.3
+    - pydantic >=2.7.4,<3.0.0
+    - langchain-core !=0.3.0,!=0.3.1,!=0.3.10,!=0.3.11,!=0.3.12,!=0.3.13,!=0.3.14,!=0.3.2,!=0.3.3,!=0.3.4,!=0.3.5,!=0.3.6,!=0.3.7,!=0.3.8,!=0.3.9,<0.4.0,>=0.2.43
     - qdrant-client >=1.10.1,<2.0.0
 
 test:
