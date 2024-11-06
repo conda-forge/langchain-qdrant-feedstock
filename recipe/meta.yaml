@@ -1,5 +1,5 @@
 {% set name = "langchain-qdrant" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_qdrant-{{ version }}.tar.gz
-  sha256: 4b2626d80549902ffb3b63e7563e0abb59d8b1b74826f160c140bb6b59647d83
+  sha256: 41b8573cbb1b4706f76dc769251d8e6b3e4107ecd5fa97c58141977ec19fba75
 
 build:
   noarch: python
