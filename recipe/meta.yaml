@@ -1,5 +1,5 @@
 {% set name = "langchain-qdrant" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_qdrant-{{ version }}.tar.gz
-  sha256: 6ac4567b387ed2a94465d3039080e82ec031bf605b215045c148032c2ebce4b7
+  sha256: 433236845736f973543ac6b7137f9d7fa511b7539373fbc6565c581d3ba59373
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }},<4.0
     - pydantic >=2.7.4,<3.0.0
     - langchain-core >=1.0.0,<2.0.0
-    - qdrant-client >=1.10.1,<2.0.0
+    - qdrant-client >=1.15.1,<2.0.0
 
 test:
   imports:
