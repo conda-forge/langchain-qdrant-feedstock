@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: langchain-qdrant
-  version: "1.1.0"
+  version: 1.2.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/langchain_qdrant-${{ version }}.tar.gz
-  sha256: 433236845736f973543ac6b7137f9d7fa511b7539373fbc6565c581d3ba59373
+  sha256: 073499ab82e68bb5019b02a3c458c3659af1e17b55bb9c480526d392947c807e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -24,10 +24,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
-    - pydantic >=2.7.4,<3.0.0
-    - langchain-core >=1.0.0,<2.0.0
-    - qdrant-client >=1.15.1,<2.0.0
-
+    - pydantic >=2.7.4
+    - langchain-core >=1.4.7,<2.0.0
+    - qdrant-client >=1.15.1,<1.16.0
 tests:
   - python:
       imports:
